@@ -1,5 +1,7 @@
 {
   "extras": [
+    "lazyvim.plugins.extras.editor.telescope",
+    "lazyvim.plugins.extras.lang.markdown",
     "lazyvim.plugins.extras.lsp.none-ls"
   ],
   "install_version": 8,
