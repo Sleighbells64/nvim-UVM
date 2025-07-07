@@ -15,3 +15,29 @@
 --     vh = "verilog",
 --   },
 -- })
+--
+
+
+-- CURRENT HOURS WASTED TRYING TO FIX SYSTEMVERILOG SLOWDOWN [[5]]
+-- Disable treesitter on BufReadPre, enable after BufReadPost
+-- vim.api.nvim_create_autocmd("BufReadPre", {
+--   pattern = "*.sv,*.svh,*.v,*.vh",
+--   callback = function()
+--     vim.cmd("TSBufDisable highlight")
+--     vim.cmd("TSBufDisable BufReadPost")
+--     vim.cmd("TSBufDisable textobjects")
+--   end,
+-- })
+--
+-- vim.api.nvim_create_autocmd("BufReadPost", {
+--   pattern = "*.sv,*.svh,*.v,*.vh",
+--   callback = function()
+--     vim.defer_fn(function()
+--       vim.cmd("TSBufEnable highlight")
+--       vim.cmd("TSBufEnable BufReadPost")
+--       vim.cmd("TSBufEnable textobjects")
+--     end, 200)
+--   end,
+-- })
+--
+
