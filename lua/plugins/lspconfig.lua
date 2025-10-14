@@ -9,7 +9,7 @@ return {
               },
         filetypes = { "verilog", "systemverilog" },
         root_dir = function(fname)
-          return require("lspconfig.util").root_pattern(".git")(fname) or vim.fs.dirname(fname)
+          return require("lspconfig.util").root_pattern(".git")(fname) or vim.fn.getcwd()
         end,
       },
       --
